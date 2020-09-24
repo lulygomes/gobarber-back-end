@@ -4,7 +4,7 @@ import { isAfter, addHours } from 'date-fns';
 import AppError from '@shared/errors/AppError';
 import IUsersRepository from '../repositories/IUsersRepository';
 import IUserTokensRepository from '../repositories/IUserTokensRepository';
-import IhashProvider from '../providers/HashProvider/models/IHashProvider';
+import IHashProvider from '../providers/HashProvider/models/IHashProvider';
 
 // import User from '../infra/typeorm/entities/User';
 
@@ -23,7 +23,7 @@ class ResetPasswordService {
     private userTokensRepository: IUserTokensRepository,
 
     @inject('HashProvider')
-    private hashProvider: IhashProvider,
+    private hashProvider: IHashProvider,
   ) {}
 
   public async execute({ token, password }: Request): Promise<void> {
