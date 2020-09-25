@@ -41,7 +41,7 @@ describe('SendForgotPasswordEmail', () => {
   it('should not be able to recover a non-existing user password', async () => {
     await expect(
       sendForgotPasswordEmail.execute({
-        email: 'johndoe@email.com',
+        email: 'johndoe2@email.com',
       }),
     ).rejects.toBeInstanceOf(AppError);
   });
