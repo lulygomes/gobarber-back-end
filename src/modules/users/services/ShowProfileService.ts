@@ -22,7 +22,7 @@ class ShowProfileService {
       throw new AppError('User does not exists');
     }
 
-    delete user.password;
+    // delete user.password;
 
     return user;
   }
